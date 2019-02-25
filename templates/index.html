@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta property="og:image" content="favicon.ico" />
+        <link rel="icon" href="/assets/img/favicon.ico">
+        <link rel="stylesheet" href="/assets/css/app.css">
+        <title>Markov Haz Dad Jokes</title>
+    </head>
+
+    <body>
+        <form action="/" method="get">
+            <div class="site-wrapper">
+                <header>
+                    <h1><span class="secondary-title">Jokes by </span><span class="main-title">I icanhazdadjoke.com</span>
+                    </h1>
+                </header>
+
+                <section class="site-main">
+                    <p class="quote" title="{{.Joke}}">{{.MarkovJoke}}</p>
+                    <h2 class="author">— Maybe Homer</h2>
+                    <img class="character" src="/assets/img/homer.png" alt="Homer Simpson">
+                    <button class="button">Spider pig!</button>
+                </section>
+            </div>
+        </form>
+    </body>
+
+</html>
