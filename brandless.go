@@ -4,8 +4,10 @@ import (
 	"fmt"
 	"html/template"
 	"log"
+	"math/rand"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/chriskaukis/brandless/icanhazdadjoke"
 	"github.com/chriskaukis/brandless/markov"
@@ -18,6 +20,9 @@ var (
 )
 
 func main() {
+	// Required to get a decent Markov message.
+	rand.Seed(time.Now().UTC().UnixNano())
+
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = defaultPort
